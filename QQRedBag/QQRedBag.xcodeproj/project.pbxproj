@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0B134731DDE9A28007748F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B134721DDE9A28007748F8 /* Foundation.framework */; };
+		B0B134751DDE9A28007748F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B134741DDE9A28007748F8 /* UIKit.framework */; };
+		B0B134921DDE9A53007748F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134911DDE9A53007748F8 /* main.m */; };
+		B0B134951DDE9A53007748F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134941DDE9A53007748F8 /* AppDelegate.m */; };
+		B0B134981DDE9A53007748F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134971DDE9A53007748F8 /* ViewController.m */; };
+		B0B1349B1DDE9A53007748F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B134991DDE9A53007748F8 /* Main.storyboard */; };
+		B0B1349D1DDE9A53007748F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B1349C1DDE9A53007748F8 /* Assets.xcassets */; };
+		B0B134A01DDE9A53007748F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B1349E1DDE9A53007748F8 /* LaunchScreen.storyboard */; };
+		B0B134A91DDE9D6D007748F8 /* UINavigationController+xyHook.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B134A51DDE9D6D007748F8 /* UINavigationController+xyHook.h */; };
+		B0B134AA1DDE9D6D007748F8 /* UINavigationController+xyHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134A61DDE9D6D007748F8 /* UINavigationController+xyHook.m */; };
+		B0B134AB1DDE9D6D007748F8 /* JRSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B134A71DDE9D6D007748F8 /* JRSwizzle.h */; };
+		B0B134AC1DDE9D6D007748F8 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134A81DDE9D6D007748F8 /* JRSwizzle.m */; };
+		B0B134AF1DDE9DAF007748F8 /* CLLocation+Simulation.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B134AD1DDE9DAF007748F8 /* CLLocation+Simulation.h */; };
+		B0B134B01DDE9DAF007748F8 /* CLLocation+Simulation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134AE1DDE9DAF007748F8 /* CLLocation+Simulation.m */; };
+		B0B134B51DDEA050007748F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B134B41DDEA050007748F8 /* CoreLocation.framework */; };
+		B0B134B91DDEA1B1007748F8 /* RedSettingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B134B61DDEA1B1007748F8 /* RedSettingViewController.h */; };
+		B0B134BA1DDEA1B1007748F8 /* RedSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134B71DDEA1B1007748F8 /* RedSettingViewController.m */; };
+		B0B134BD1DDEA1D4007748F8 /* RedManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B134BB1DDEA1D4007748F8 /* RedManager.h */; };
+		B0B134BE1DDEA1D4007748F8 /* RedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134BC1DDEA1D4007748F8 /* RedManager.m */; };
+		B0B134BF1DDEA205007748F8 /* RedBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B134B81DDEA1B1007748F8 /* RedBag.storyboard */; };
+		B0B134C21DDEA232007748F8 /* SelectionLocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B134C01DDEA232007748F8 /* SelectionLocationViewController.h */; };
+		B0B134C31DDEA232007748F8 /* SelectionLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134C11DDEA232007748F8 /* SelectionLocationViewController.m */; };
+		B0B843491DE2958400542D6D /* UIViewController+QQSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B843471DE2958400542D6D /* UIViewController+QQSettingsViewController.h */; };
+		B0B8434A1DE2958400542D6D /* UIViewController+QQSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B843481DE2958400542D6D /* UIViewController+QQSettingsViewController.m */; };
+		B0B8434C1DE296D900542D6D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B8434B1DE296D900542D6D /* HealthKit.framework */; };
+		B0B8434F1DE2985800542D6D /* NSObject+QQMessageRecallModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B8434D1DE2985800542D6D /* NSObject+QQMessageRecallModule.h */; };
+		B0B843501DE2985800542D6D /* NSObject+QQMessageRecallModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.m */; };
+		B0B843531DE29BDB00542D6D /* NSObject+QIMService.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B843511DE29BDB00542D6D /* NSObject+QIMService.h */; };
+		B0B843541DE29BDB00542D6D /* NSObject+QIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B843521DE29BDB00542D6D /* NSObject+QIMService.m */; };
+		B0B843571DE2B4ED00542D6D /* NSBundle+xyHook.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B843551DE2B4ED00542D6D /* NSBundle+xyHook.h */; };
+		B0B843581DE2B4ED00542D6D /* NSBundle+xyHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B843561DE2B4ED00542D6D /* NSBundle+xyHook.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0B134B21DDE9F09007748F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0B134661DDE9A28007748F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0B1346E1DDE9A28007748F8;
+			remoteInfo = QQRedBag;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0B1346F1DDE9A28007748F8 /* libQQRedBag.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libQQRedBag.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B134721DDE9A28007748F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B0B134741DDE9A28007748F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B0B134791DDE9A28007748F8 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		B0B1347A1DDE9A28007748F8 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		B0B1347C1DDE9A28007748F8 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		B0B1347D1DDE9A28007748F8 /* QQRedBag-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QQRedBag-Prefix.pch"; sourceTree = "<group>"; };
+		B0B134841DDE9A28007748F8 /* 0xdeadfa11 */ = {isa = PBXFileReference; lastKnownFileType = text; name = 0xdeadfa11; path = Package/usr/lib/0xdeadfa11; sourceTree = "<group>"; };
+		B0B1348E1DDE9A53007748F8 /* QQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B134911DDE9A53007748F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0B134931DDE9A53007748F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B0B134941DDE9A53007748F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B0B134961DDE9A53007748F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B0B134971DDE9A53007748F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B0B1349A1DDE9A53007748F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0B1349C1DDE9A53007748F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0B1349F1DDE9A53007748F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0B134A11DDE9A53007748F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B134A51DDE9D6D007748F8 /* UINavigationController+xyHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+xyHook.h"; sourceTree = "<group>"; };
+		B0B134A61DDE9D6D007748F8 /* UINavigationController+xyHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+xyHook.m"; sourceTree = "<group>"; };
+		B0B134A71DDE9D6D007748F8 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		B0B134A81DDE9D6D007748F8 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		B0B134AD1DDE9DAF007748F8 /* CLLocation+Simulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Simulation.h"; sourceTree = "<group>"; };
+		B0B134AE1DDE9DAF007748F8 /* CLLocation+Simulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Simulation.m"; sourceTree = "<group>"; };
+		B0B134B41DDEA050007748F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B0B134B61DDEA1B1007748F8 /* RedSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedSettingViewController.h; sourceTree = "<group>"; };
+		B0B134B71DDEA1B1007748F8 /* RedSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedSettingViewController.m; sourceTree = "<group>"; };
+		B0B134B81DDEA1B1007748F8 /* RedBag.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RedBag.storyboard; sourceTree = "<group>"; };
+		B0B134BB1DDEA1D4007748F8 /* RedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedManager.h; sourceTree = "<group>"; };
+		B0B134BC1DDEA1D4007748F8 /* RedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedManager.m; sourceTree = "<group>"; };
+		B0B134C01DDEA232007748F8 /* SelectionLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionLocationViewController.h; sourceTree = "<group>"; };
+		B0B134C11DDEA232007748F8 /* SelectionLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionLocationViewController.m; sourceTree = "<group>"; };
+		B0B843461DE2945300542D6D /* QQ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QQ.entitlements; sourceTree = "<group>"; };
+		B0B843471DE2958400542D6D /* UIViewController+QQSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QQSettingsViewController.h"; sourceTree = "<group>"; };
+		B0B843481DE2958400542D6D /* UIViewController+QQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QQSettingsViewController.m"; sourceTree = "<group>"; };
+		B0B8434B1DE296D900542D6D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		B0B8434D1DE2985800542D6D /* NSObject+QQMessageRecallModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QQMessageRecallModule.h"; sourceTree = "<group>"; };
+		B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QQMessageRecallModule.m"; sourceTree = "<group>"; };
+		B0B843511DE29BDB00542D6D /* NSObject+QIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QIMService.h"; sourceTree = "<group>"; };
+		B0B843521DE29BDB00542D6D /* NSObject+QIMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QIMService.m"; sourceTree = "<group>"; };
+		B0B843551DE2B4ED00542D6D /* NSBundle+xyHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+xyHook.h"; sourceTree = "<group>"; };
+		B0B843561DE2B4ED00542D6D /* NSBundle+xyHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+xyHook.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0B1346B1DDE9A28007748F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B134B51DDEA050007748F8 /* CoreLocation.framework in Frameworks */,
+				B0B134731DDE9A28007748F8 /* Foundation.framework in Frameworks */,
+				B0B134751DDE9A28007748F8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B1348B1DDE9A53007748F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B8434C1DE296D900542D6D /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0B134651DDE9A28007748F8 = {
+			isa = PBXGroup;
+			children = (
+				B0B134761DDE9A28007748F8 /* QQRedBag */,
+				B0B1348F1DDE9A53007748F8 /* QQ */,
+				B0B134711DDE9A28007748F8 /* Frameworks */,
+				B0B134701DDE9A28007748F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0B134701DDE9A28007748F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0B1346F1DDE9A28007748F8 /* libQQRedBag.dylib */,
+				B0B1348E1DDE9A53007748F8 /* QQ.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0B134711DDE9A28007748F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0B8434B1DE296D900542D6D /* HealthKit.framework */,
+				B0B134B41DDEA050007748F8 /* CoreLocation.framework */,
+				B0B134721DDE9A28007748F8 /* Foundation.framework */,
+				B0B134741DDE9A28007748F8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0B134761DDE9A28007748F8 /* QQRedBag */ = {
+			isa = PBXGroup;
+			children = (
+				B0B134BB1DDEA1D4007748F8 /* RedManager.h */,
+				B0B134BC1DDEA1D4007748F8 /* RedManager.m */,
+				B0B134A51DDE9D6D007748F8 /* UINavigationController+xyHook.h */,
+				B0B134A61DDE9D6D007748F8 /* UINavigationController+xyHook.m */,
+				B0B843551DE2B4ED00542D6D /* NSBundle+xyHook.h */,
+				B0B843561DE2B4ED00542D6D /* NSBundle+xyHook.m */,
+				B0B843471DE2958400542D6D /* UIViewController+QQSettingsViewController.h */,
+				B0B843481DE2958400542D6D /* UIViewController+QQSettingsViewController.m */,
+				B0B8434D1DE2985800542D6D /* NSObject+QQMessageRecallModule.h */,
+				B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.m */,
+				B0B843511DE29BDB00542D6D /* NSObject+QIMService.h */,
+				B0B843521DE29BDB00542D6D /* NSObject+QIMService.m */,
+				B0B134B61DDEA1B1007748F8 /* RedSettingViewController.h */,
+				B0B134B71DDEA1B1007748F8 /* RedSettingViewController.m */,
+				B0B134B81DDEA1B1007748F8 /* RedBag.storyboard */,
+				B0B134C01DDEA232007748F8 /* SelectionLocationViewController.h */,
+				B0B134C11DDEA232007748F8 /* SelectionLocationViewController.m */,
+				B0B134AD1DDE9DAF007748F8 /* CLLocation+Simulation.h */,
+				B0B134AE1DDE9DAF007748F8 /* CLLocation+Simulation.m */,
+				B0B134A71DDE9D6D007748F8 /* JRSwizzle.h */,
+				B0B134A81DDE9D6D007748F8 /* JRSwizzle.m */,
+				B0B134771DDE9A28007748F8 /* Package */,
+				B0B1347B1DDE9A28007748F8 /* Supporting Files */,
+			);
+			path = QQRedBag;
+			sourceTree = "<group>";
+		};
+		B0B134771DDE9A28007748F8 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				B0B134781DDE9A28007748F8 /* DEBIAN */,
+				B0B134821DDE9A28007748F8 /* usr */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		B0B134781DDE9A28007748F8 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				B0B134791DDE9A28007748F8 /* control.txt */,
+				B0B1347A1DDE9A28007748F8 /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		B0B1347B1DDE9A28007748F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0B1347C1DDE9A28007748F8 /* PackageVersion.plist */,
+				B0B1347D1DDE9A28007748F8 /* QQRedBag-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0B134821DDE9A28007748F8 /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				B0B134831DDE9A28007748F8 /* lib */,
+			);
+			name = usr;
+			sourceTree = "<group>";
+		};
+		B0B134831DDE9A28007748F8 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B0B134841DDE9A28007748F8 /* 0xdeadfa11 */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		B0B1348F1DDE9A53007748F8 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				B0B843461DE2945300542D6D /* QQ.entitlements */,
+				B0B134931DDE9A53007748F8 /* AppDelegate.h */,
+				B0B134941DDE9A53007748F8 /* AppDelegate.m */,
+				B0B134961DDE9A53007748F8 /* ViewController.h */,
+				B0B134971DDE9A53007748F8 /* ViewController.m */,
+				B0B134991DDE9A53007748F8 /* Main.storyboard */,
+				B0B1349C1DDE9A53007748F8 /* Assets.xcassets */,
+				B0B1349E1DDE9A53007748F8 /* LaunchScreen.storyboard */,
+				B0B134A11DDE9A53007748F8 /* Info.plist */,
+				B0B134901DDE9A53007748F8 /* Supporting Files */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		B0B134901DDE9A53007748F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0B134911DDE9A53007748F8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B0B1346C1DDE9A28007748F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B134B91DDEA1B1007748F8 /* RedSettingViewController.h in Headers */,
+				B0B843491DE2958400542D6D /* UIViewController+QQSettingsViewController.h in Headers */,
+				B0B8434F1DE2985800542D6D /* NSObject+QQMessageRecallModule.h in Headers */,
+				B0B134A91DDE9D6D007748F8 /* UINavigationController+xyHook.h in Headers */,
+				B0B134AF1DDE9DAF007748F8 /* CLLocation+Simulation.h in Headers */,
+				B0B134AB1DDE9D6D007748F8 /* JRSwizzle.h in Headers */,
+				B0B843531DE29BDB00542D6D /* NSObject+QIMService.h in Headers */,
+				B0B843571DE2B4ED00542D6D /* NSBundle+xyHook.h in Headers */,
+				B0B134BD1DDEA1D4007748F8 /* RedManager.h in Headers */,
+				B0B134C21DDEA232007748F8 /* SelectionLocationViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B0B1346E1DDE9A28007748F8 /* QQRedBag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0B134871DDE9A28007748F8 /* Build configuration list for PBXNativeTarget "QQRedBag" */;
+			buildPhases = (
+				B0B1346A1DDE9A28007748F8 /* Sources */,
+				B0B1346B1DDE9A28007748F8 /* Frameworks */,
+				B0B1346C1DDE9A28007748F8 /* Headers */,
+				B0B1346D1DDE9A28007748F8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QQRedBag;
+			productName = QQRedBag;
+			productReference = B0B1346F1DDE9A28007748F8 /* libQQRedBag.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		B0B1348D1DDE9A53007748F8 /* QQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0B134A21DDE9A53007748F8 /* Build configuration list for PBXNativeTarget "QQ" */;
+			buildPhases = (
+				B0B1348A1DDE9A53007748F8 /* Sources */,
+				B0B1348B1DDE9A53007748F8 /* Frameworks */,
+				B0B1348C1DDE9A53007748F8 /* Resources */,
+				B0B134B11DDE9EF8007748F8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0B134B31DDE9F09007748F8 /* PBXTargetDependency */,
+			);
+			name = QQ;
+			productName = QQ;
+			productReference = B0B1348E1DDE9A53007748F8 /* QQ.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0B134661DDE9A28007748F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					B0B1346E1DDE9A28007748F8 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					B0B1348D1DDE9A53007748F8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L7P3DYSB6A;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B0B134691DDE9A28007748F8 /* Build configuration list for PBXProject "QQRedBag" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0B134651DDE9A28007748F8;
+			productRefGroup = B0B134701DDE9A28007748F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0B1346E1DDE9A28007748F8 /* QQRedBag */,
+				B0B1348D1DDE9A53007748F8 /* QQ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0B1348C1DDE9A53007748F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B134A01DDE9A53007748F8 /* LaunchScreen.storyboard in Resources */,
+				B0B134BF1DDEA205007748F8 /* RedBag.storyboard in Resources */,
+				B0B1349D1DDE9A53007748F8 /* Assets.xcassets in Resources */,
+				B0B1349B1DDE9A53007748F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0B1346D1DDE9A28007748F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+		B0B134B11DDE9EF8007748F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nrm -rf QQ.app/libQQRedBag.dylib\nmv LatestBuild/libQQRedBag.dylib QQ.app/\nrm -rf QQ.app/RedBag.storyboardc\nmv LatestBuild/QQ.app/RedBag.storyboardc QQ.app/\n\ncodesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" QQ.app/libQQRedBag.dylib\ncodesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" QQ.app/PlugIns/QQShare.appex\ncodesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" --entitlements Entitlements.plist QQ.app\n\nrm -rf LatestBuild/QQ.app\ncp -R QQ.app LatestBuild/";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0B1346A1DDE9A28007748F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B134BA1DDEA1B1007748F8 /* RedSettingViewController.m in Sources */,
+				B0B134AC1DDE9D6D007748F8 /* JRSwizzle.m in Sources */,
+				B0B843581DE2B4ED00542D6D /* NSBundle+xyHook.m in Sources */,
+				B0B134C31DDEA232007748F8 /* SelectionLocationViewController.m in Sources */,
+				B0B134B01DDE9DAF007748F8 /* CLLocation+Simulation.m in Sources */,
+				B0B843501DE2985800542D6D /* NSObject+QQMessageRecallModule.m in Sources */,
+				B0B134AA1DDE9D6D007748F8 /* UINavigationController+xyHook.m in Sources */,
+				B0B843541DE29BDB00542D6D /* NSObject+QIMService.m in Sources */,
+				B0B8434A1DE2958400542D6D /* UIViewController+QQSettingsViewController.m in Sources */,
+				B0B134BE1DDEA1D4007748F8 /* RedManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B1348A1DDE9A53007748F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0B134981DDE9A53007748F8 /* ViewController.m in Sources */,
+				B0B134951DDE9A53007748F8 /* AppDelegate.m in Sources */,
+				B0B134921DDE9A53007748F8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0B134B31DDE9F09007748F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0B1346E1DDE9A28007748F8 /* QQRedBag */;
+			targetProxy = B0B134B21DDE9F09007748F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0B134991DDE9A53007748F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0B1349A1DDE9A53007748F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0B1349E1DDE9A53007748F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0B1349F1DDE9A53007748F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0B134851DDE9A28007748F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		B0B134861DDE9A28007748F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		B0B134881DDE9A28007748F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QQRedBag/QQRedBag-Prefix.pch";
+				INSTALL_PATH = /usr/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		B0B134891DDE9A28007748F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QQRedBag/QQRedBag-Prefix.pch";
+				INSTALL_PATH = /usr/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+		B0B134A31DDE9A53007748F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = QQ/QQ.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = QQ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.QQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
+			};
+			name = Debug;
+		};
+		B0B134A41DDE9A53007748F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = QQ/QQ.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = QQ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.QQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0B134691DDE9A28007748F8 /* Build configuration list for PBXProject "QQRedBag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0B134851DDE9A28007748F8 /* Debug */,
+				B0B134861DDE9A28007748F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0B134871DDE9A28007748F8 /* Build configuration list for PBXNativeTarget "QQRedBag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0B134881DDE9A28007748F8 /* Debug */,
+				B0B134891DDE9A28007748F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0B134A21DDE9A53007748F8 /* Build configuration list for PBXNativeTarget "QQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0B134A31DDE9A53007748F8 /* Debug */,
+				B0B134A41DDE9A53007748F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0B134661DDE9A28007748F8 /* Project object */;
+}
