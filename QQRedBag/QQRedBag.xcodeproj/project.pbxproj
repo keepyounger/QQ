@@ -33,7 +33,7 @@
 		B0B8434A1DE2958400542D6D /* UIViewController+QQSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B843481DE2958400542D6D /* UIViewController+QQSettingsViewController.m */; };
 		B0B8434C1DE296D900542D6D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B8434B1DE296D900542D6D /* HealthKit.framework */; };
 		B0B8434F1DE2985800542D6D /* NSObject+QQMessageRecallModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B8434D1DE2985800542D6D /* NSObject+QQMessageRecallModule.h */; };
-		B0B843501DE2985800542D6D /* NSObject+QQMessageRecallModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.m */; };
+		B0B843501DE2985800542D6D /* NSObject+QQMessageRecallModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.mm */; };
 		B0B843531DE29BDB00542D6D /* NSObject+QIMService.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B843511DE29BDB00542D6D /* NSObject+QIMService.h */; };
 		B0B843541DE29BDB00542D6D /* NSObject+QIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B843521DE29BDB00542D6D /* NSObject+QIMService.m */; };
 		B0B843571DE2B4ED00542D6D /* NSBundle+xyHook.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B843551DE2B4ED00542D6D /* NSBundle+xyHook.h */; };
@@ -88,7 +88,7 @@
 		B0B843481DE2958400542D6D /* UIViewController+QQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QQSettingsViewController.m"; sourceTree = "<group>"; };
 		B0B8434B1DE296D900542D6D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B0B8434D1DE2985800542D6D /* NSObject+QQMessageRecallModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QQMessageRecallModule.h"; sourceTree = "<group>"; };
-		B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QQMessageRecallModule.m"; sourceTree = "<group>"; };
+		B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+QQMessageRecallModule.mm"; sourceTree = "<group>"; };
 		B0B843511DE29BDB00542D6D /* NSObject+QIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QIMService.h"; sourceTree = "<group>"; };
 		B0B843521DE29BDB00542D6D /* NSObject+QIMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QIMService.m"; sourceTree = "<group>"; };
 		B0B843551DE2B4ED00542D6D /* NSBundle+xyHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+xyHook.h"; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 				B0B843471DE2958400542D6D /* UIViewController+QQSettingsViewController.h */,
 				B0B843481DE2958400542D6D /* UIViewController+QQSettingsViewController.m */,
 				B0B8434D1DE2985800542D6D /* NSObject+QQMessageRecallModule.h */,
-				B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.m */,
+				B0B8434E1DE2985800542D6D /* NSObject+QQMessageRecallModule.mm */,
 				B0B843511DE29BDB00542D6D /* NSObject+QIMService.h */,
 				B0B843521DE29BDB00542D6D /* NSObject+QIMService.m */,
 				B0B134B61DDEA1B1007748F8 /* RedSettingViewController.h */,
@@ -407,7 +407,7 @@
 				B0B843581DE2B4ED00542D6D /* NSBundle+xyHook.m in Sources */,
 				B0B134C31DDEA232007748F8 /* SelectionLocationViewController.m in Sources */,
 				B0B134B01DDE9DAF007748F8 /* CLLocation+Simulation.m in Sources */,
-				B0B843501DE2985800542D6D /* NSObject+QQMessageRecallModule.m in Sources */,
+				B0B843501DE2985800542D6D /* NSObject+QQMessageRecallModule.mm in Sources */,
 				B0B134AA1DDE9D6D007748F8 /* UINavigationController+xyHook.m in Sources */,
 				B0B843541DE29BDB00542D6D /* NSObject+QIMService.m in Sources */,
 				B0B8434A1DE2958400542D6D /* UIViewController+QQSettingsViewController.m in Sources */,
