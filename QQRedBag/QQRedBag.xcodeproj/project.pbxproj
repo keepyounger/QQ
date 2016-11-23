@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0001F431DE4581300FFA04E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0001F421DE4581300FFA04E /* libz.tbd */; };
+		B0001F451DE4585200FFA04E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0001F441DE4585200FFA04E /* CoreGraphics.framework */; };
+		B0001F471DE4585B00FFA04E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0001F461DE4585B00FFA04E /* QuartzCore.framework */; };
+		B0001F491DE4586200FFA04E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0001F481DE4586200FFA04E /* CFNetwork.framework */; };
 		B0B134731DDE9A28007748F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B134721DDE9A28007748F8 /* Foundation.framework */; };
 		B0B134751DDE9A28007748F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B134741DDE9A28007748F8 /* UIKit.framework */; };
 		B0B134921DDE9A53007748F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134911DDE9A53007748F8 /* main.m */; };
@@ -51,6 +55,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0001F401DE4580800FFA04E /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		B0001F421DE4581300FFA04E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B0001F441DE4585200FFA04E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B0001F461DE4585B00FFA04E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B0001F481DE4586200FFA04E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B0B1346F1DDE9A28007748F8 /* libQQRedBag.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libQQRedBag.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B134721DDE9A28007748F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0B134741DDE9A28007748F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -100,9 +109,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0001F491DE4586200FFA04E /* CFNetwork.framework in Frameworks */,
+				B0001F471DE4585B00FFA04E /* QuartzCore.framework in Frameworks */,
+				B0001F451DE4585200FFA04E /* CoreGraphics.framework in Frameworks */,
+				B0B134751DDE9A28007748F8 /* UIKit.framework in Frameworks */,
+				B0001F431DE4581300FFA04E /* libz.tbd in Frameworks */,
 				B0B134B51DDEA050007748F8 /* CoreLocation.framework in Frameworks */,
 				B0B134731DDE9A28007748F8 /* Foundation.framework in Frameworks */,
-				B0B134751DDE9A28007748F8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +152,10 @@
 		B0B134711DDE9A28007748F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0001F481DE4586200FFA04E /* CFNetwork.framework */,
+				B0001F461DE4585B00FFA04E /* QuartzCore.framework */,
+				B0001F441DE4585200FFA04E /* CoreGraphics.framework */,
+				B0001F421DE4581300FFA04E /* libz.tbd */,
 				B0B8434B1DE296D900542D6D /* HealthKit.framework */,
 				B0B134B41DDEA050007748F8 /* CoreLocation.framework */,
 				B0B134721DDE9A28007748F8 /* Foundation.framework */,
@@ -150,6 +167,7 @@
 		B0B134761DDE9A28007748F8 /* QQRedBag */ = {
 			isa = PBXGroup;
 			children = (
+				B0001F401DE4580800FFA04E /* Reveal.framework */,
 				B0B134BB1DDEA1D4007748F8 /* RedManager.h */,
 				B0B134BC1DDEA1D4007748F8 /* RedManager.m */,
 				B0B134A51DDE9D6D007748F8 /* UINavigationController+xyHook.h */,
@@ -517,9 +535,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QQRedBag",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QQRedBag/QQRedBag-Prefix.pch";
 				INSTALL_PATH = /usr/lib;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
@@ -541,9 +569,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QQRedBag",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QQRedBag/QQRedBag-Prefix.pch";
 				INSTALL_PATH = /usr/lib;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
 				iOSOpenDevBuildPackageOnAnyBuild = NO;

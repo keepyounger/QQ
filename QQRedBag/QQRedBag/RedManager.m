@@ -81,18 +81,6 @@ static RedManager *_manager = nil;
         class = objc_getClass("QQMessageRecallModule");
         [class jr_swizzleMethod:@selector(handleRecallNotify:isOnline:) withMethod:@selector(xy_handleRecallNotify:isOnline:) error:nil];
         
-//        class = objc_getClass("RecallC2CBaseProcessor");
-//        [class jr_swizzleMethod:@selector(getLocalMessage:) withMethod:@selector(xy_getLocalMessage:) error:nil];
-//        [class jr_swizzleMethod:@selector(getRecallMessageContent:) withMethod:@selector(xy_getRecallMessageContent:) error:nil];
-//        
-//        class = objc_getClass("RecallDiscussProcessor");
-//        [class jr_swizzleMethod:@selector(getLocalMessage:) withMethod:@selector(xy_getLocalMessage:) error:nil];
-//        [class jr_swizzleMethod:@selector(getRecallMessageContent:item:msg:isOnline:) withMethod:@selector(xy_getRecallMessageContent:item:msg:isOnline:) error:nil];
-//        
-//        class = objc_getClass("RecallGroupProcessor");
-//        [class jr_swizzleMethod:@selector(getLocalMessage:) withMethod:@selector(xy_getLocalMessage:) error:nil];
-//        [class jr_swizzleMethod:@selector(getRecallMessageContent:item:msg:isOnline:) withMethod:@selector(xy_getRecallMessageContent:item:msg:isOnline:) error:nil];
-        
         class = objc_getClass("QIMService");
         [class jr_swizzleMethod:@selector(postRegisteNotification:Object:userInfo:) withMethod:@selector(xy_postRegisteNotification:Object:userInfo:) error:nil];
         
