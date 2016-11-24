@@ -118,8 +118,7 @@
                     }
                     
                     //3秒超时
-                    [self performSelector:@selector(resetFlag) withObject:nil afterDelay:3];
-                    [[self xy_viewController].navigationController setNavigationBarHidden:NO];
+                    [self performSelector:@selector(resetFlag) withObject:nil afterDelay:2];
 
                 }
                 
@@ -132,7 +131,6 @@
 - (void)resetFlag
 {
     [NSObject setTag:0];
-    [[self xy_viewController].navigationController setNavigationBarHidden:NO];
 }
 
 - (UIViewController *)xy_viewController
