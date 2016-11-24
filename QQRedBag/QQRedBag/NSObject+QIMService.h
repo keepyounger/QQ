@@ -12,7 +12,14 @@
 @interface NSObject (QIMService)
 @end
 
+@interface QQBaseChatModel : NSObject
+@property(retain, nonatomic) NSMutableArray *chatMessages; // @dynamic chatMessages;
+@property(copy, nonatomic) NSString *uin; // @dynamic uin;
+- (void)clearMessages;
+@end
+
 @interface QQChatViewTable : UITableView
+@property(retain, nonatomic) QQBaseChatModel *chatModel; // @synthesize chatModel=_chatModel;
 @property(nonatomic) __weak UIViewController *supViewController; // @synthesize supViewController=_supViewController;
 @end
 
@@ -39,8 +46,6 @@
 @property(retain, nonatomic) UIImageView *backgroudView; // @dynamic backgroudView;
 @property(nonatomic) BOOL hasOpenRedEnvelope; // @dynamic hasOpenRedEnvelope;
 @property(retain, nonatomic) QQWalletTransferAIOMsgModel *model; // @synthesize model=_model;
-@property(retain, nonatomic) UIButton *openDetailButton; // @dynamic openDetailButton;
-@property(retain, nonatomic) UIButton *openTipsButton; // @dynamic openTipsButton;
 @end
 
 @interface QQWalletTransferAIOCellView : UIView
