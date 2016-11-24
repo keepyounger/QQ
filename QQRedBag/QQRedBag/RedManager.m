@@ -7,7 +7,7 @@
 //
 
 #import "RedManager.h"
-#import <UIKit/UIApplication.h>
+#import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 #import "JRSwizzle.h"
 
@@ -81,9 +81,18 @@ static RedManager *_manager = nil;
         class = objc_getClass("QQMessageRecallModule");
         [class jr_swizzleMethod:@selector(handleRecallNotify:isOnline:) withMethod:@selector(xy_handleRecallNotify:isOnline:) error:nil];
         
-        class = objc_getClass("QIMService");
-        [class jr_swizzleMethod:@selector(postRegisteNotification:Object:userInfo:) withMethod:@selector(xy_postRegisteNotification:Object:userInfo:) error:nil];
+//        class = objc_getClass("QIMService");
+//        [class jr_swizzleMethod:@selector(postRegisteNotification:Object:userInfo:) withMethod:@selector(xy_postRegisteNotification:Object:userInfo:) error:nil];
         
+        //QQChatViewTable
+        class = objc_getClass("QQChatViewTable");
+        [class jr_swizzleMethod:@selector(tableView:willDisplayCell:forRowAtIndexPath:) withMethod:@selector(xy_tableView:willDisplayCell:forRowAtIndexPath:) error:nil];
+        
+//        class = objc_getClass("QQAddressBookAppDelegate");
+//        [class jr_swizzleMethod:@selector(application:shouldAllowExtensionPointIdentifier:) withMethod:@selector(xy_application:shouldAllowExtensionPointIdentifier:) error:nil];
+        
+        [[UITouch class] jr_swizzleMethod:@selector(locationInView:) withMethod:@selector(xy_locationInView:) error:nil];
+
         [CLLocation jr_swizzleMethod:@selector(coordinate) withMethod:@selector(xy_coordinate) error:nil];
         
     });
