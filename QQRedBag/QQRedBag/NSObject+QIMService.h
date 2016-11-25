@@ -62,6 +62,20 @@
 - (BOOL)didTouchEnded:(id)arg1 withEvent:(id)arg2;
 @end
 
+@interface QQAIOMsgModel : NSObject
+@property(retain, nonatomic) QQMessageModel *msgModel; // @dynamic msgModel;
+@end
+
+@interface QQAIOCommonCell : NSObject
+@property(retain, nonatomic) QQAIOMsgModel *aioModel;
+@end
+
+@interface QQAIOTextCell : QQAIOCommonCell
+@end
+
+@interface QQWalletTransferAIOCell : QQAIOCommonCell
+@end
+
 @interface NSObject (tag)
 + (void)setTag:(NSInteger)tag;
 + (NSInteger)tag;
