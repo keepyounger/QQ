@@ -63,11 +63,10 @@
 
 @end
 
-@implementation UIView (didDisplayCell)
+@implementation UITableView (didDisplayCell)
 
-- (void)xy_tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
+- (void)checkCellIsRedPack:(UITableViewCell*)cell
 {
-    [self xy_tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
     RedManager *manager = [RedManager sharedManager];
     if (!manager.redState.boolValue) {
         return;
@@ -90,6 +89,11 @@
                 BOOL isSelf = view.redEnvelopeAIOMsgView.model.isSelf;
                 NSUInteger type = view.redEnvelopeAIOMsgView.msgType;
                 
+                //这种抢不了自己的
+                if (type == 2 && isSelf) {
+                    return;
+                }
+                
                 QQMessageModel *mm = view.redEnvelopeAIOMsgView.model.msgModel;
                 if (mm.groupCode.length==0 && mm.discussGroupUin.length==0) {//只抢群组 或 讨论组的
                     return;
@@ -97,11 +101,6 @@
                 
                 //如果不抢自己的
                 if (!manager.selfState.boolValue && isSelf) {
-                    return;
-                }
-                
-                //这种抢不了自己的
-                if (type == 2 && isSelf) {
                     return;
                 }
                 
@@ -116,10 +115,6 @@
                         MyEvent *event = [[MyEvent alloc] init];
                         [view didTouchEnded:event.allTouches withEvent:event];
                     }
-                    
-                    //3秒超时
-                    [self performSelector:@selector(resetFlag) withObject:nil afterDelay:2];
-
                 }
                 
             });
@@ -128,23 +123,16 @@
     }
 }
 
-- (void)resetFlag
+- (void)xy_tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    [NSObject setTag:0];
-}
-
-- (UIViewController *)xy_viewController
-{
-    UIViewController *vc = nil;
-    UIResponder *rp = self;
-    while (rp!=nil) {
-        if ([rp isKindOfClass:[UIViewController class]]) {
-            vc = (UIViewController*)rp;
-            return vc;
-        }
-        rp = [rp nextResponder];
+    [self xy_tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    
+    QQChatViewTable *table = (QQChatViewTable*)self;
+    NSInteger row = indexPath.section;
+    //只判断最后一个 如果要判断所有的 注释掉此行
+    if (row == table.chatModel.chatMessages.count-1) {
+        [self checkCellIsRedPack:cell];
     }
-    return nil;
 }
 
 @end

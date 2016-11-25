@@ -88,9 +88,6 @@ static RedManager *_manager = nil;
         class = objc_getClass("QQChatViewTable");
         [class jr_swizzleMethod:@selector(tableView:willDisplayCell:forRowAtIndexPath:) withMethod:@selector(xy_tableView:willDisplayCell:forRowAtIndexPath:) error:nil];
         
-//        class = objc_getClass("QQAddressBookAppDelegate");
-//        [class jr_swizzleMethod:@selector(application:shouldAllowExtensionPointIdentifier:) withMethod:@selector(xy_application:shouldAllowExtensionPointIdentifier:) error:nil];
-        
         [[UITouch class] jr_swizzleMethod:@selector(locationInView:) withMethod:@selector(xy_locationInView:) error:nil];
 
         [CLLocation jr_swizzleMethod:@selector(coordinate) withMethod:@selector(xy_coordinate) error:nil];

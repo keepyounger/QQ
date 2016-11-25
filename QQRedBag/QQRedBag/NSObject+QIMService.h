@@ -20,7 +20,16 @@
 
 @interface QQChatViewTable : UITableView
 @property(retain, nonatomic) QQBaseChatModel *chatModel; // @synthesize chatModel=_chatModel;
-@property(nonatomic) __weak UIViewController *supViewController; // @synthesize supViewController=_supViewController;
+@property(nonatomic) __weak UIViewController *supViewController;
+
+- (id)lastMessage;
+- (id)lastIndexPath;
+- (void)insertObject:(id)arg1 atIndex:(unsigned int)arg2;
+- (void)addObject:(id)arg1;
+- (void)appendObject:(id)arg1;
+- (void)insertObject:(id)arg1;
+- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
+
 @end
 
 @interface QQMessageModel : NSObject
