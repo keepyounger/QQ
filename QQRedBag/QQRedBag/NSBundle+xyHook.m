@@ -7,20 +7,27 @@
 //
 
 #import "NSBundle+xyHook.h"
+#import "JRSwizzle.h"
 
 @implementation NSBundle (xyHook)
 
-- (NSDictionary<NSString *,id> *)xy_infoDictionary
-{
-    NSDictionary *dic = [self xy_infoDictionary];
-    NSMutableDictionary *dic2 = [NSMutableDictionary dictionaryWithDictionary:dic];
-    [dic2 setObject:@"com.tencent.mqq" forKey:@"CFBundleIdentifier"];
-    return dic2;
-}
-
-- (NSString *)xy_bundleIdentifier
-{
-    return @"com.tencent.mqq";
-}
+//+ (void)load
+//{
+//    [[NSBundle class] jr_swizzleMethod:@selector(infoDictionary) withMethod:@selector(xy_infoDictionary) error:nil];
+//    [[NSBundle class] jr_swizzleMethod:@selector(bundleIdentifier) withMethod:@selector(xy_bundleIdentifier) error:nil];
+//}
+//
+//- (NSDictionary<NSString *,id> *)xy_infoDictionary
+//{
+//    NSDictionary *dic = [self xy_infoDictionary];
+//    NSMutableDictionary *dic2 = [NSMutableDictionary dictionaryWithDictionary:dic];
+//    [dic2 setObject:@"com.tencent.mqq" forKey:@"CFBundleIdentifier"];
+//    return dic2;
+//}
+//
+//- (NSString *)xy_bundleIdentifier
+//{
+//    return @"com.tencent.mqq";
+//}
 
 @end

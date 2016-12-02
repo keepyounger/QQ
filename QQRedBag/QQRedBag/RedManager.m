@@ -72,9 +72,6 @@ static RedManager *_manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        [[NSBundle class] jr_swizzleMethod:@selector(infoDictionary) withMethod:@selector(xy_infoDictionary) error:nil];
-        [[NSBundle class] jr_swizzleMethod:@selector(bundleIdentifier) withMethod:@selector(xy_bundleIdentifier) error:nil];
-        
         Class class = objc_getClass("QQSettingsViewController");
         [class jr_swizzleMethod:@selector(viewDidLoad) withMethod:@selector(xy_viewDidLoad) error:nil];
         
