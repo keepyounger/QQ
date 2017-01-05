@@ -24,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UISwitch *locationSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
+@property (weak, nonatomic) IBOutlet UISwitch *otherDeviceSwitch;
+
+@property (weak, nonatomic) IBOutlet UITextField *otherDeviceField;
+
 @end
 
 @implementation RedSettingViewController
@@ -63,6 +67,9 @@
     self.revokedMessageSwitch.on = [manager.revokeState boolValue];
     
     self.locationSwitch.on = [manager.locationState boolValue];
+    
+    self.otherDeviceSwitch.on = [manager.otherDeviceState boolValue];
+    self.otherDeviceField.text = manager.otherDeviceStr;
     
     NSArray *array = [manager.locationStr componentsSeparatedByString:@","];
     
@@ -119,6 +126,9 @@
     
     manager.revokeState = @(self.revokedMessageSwitch.on).stringValue;
     manager.locationState = @(self.locationSwitch.on).stringValue;
+    
+    manager.otherDeviceState = @(self.otherDeviceSwitch.on).stringValue;
+    manager.otherDeviceStr = self.otherDeviceField.text?:@"";
     
     [manager saveSetting];
 }

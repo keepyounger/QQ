@@ -171,4 +171,24 @@ static RedManager *_manager = nil;
     return self.settingInfo[@"locationState"];
 }
 
+- (void)setOtherDeviceState:(NSString *)otherDeviceState
+{
+    self.settingInfo[@"otherDeviceState"] = otherDeviceState;
+}
+
+- (NSString *)otherDeviceState
+{
+    return self.settingInfo[@"otherDeviceState"];
+}
+
+- (void)setOtherDeviceStr:(NSString *)otherDeviceStr
+{
+    self.settingInfo[@"otherDeviceStr"] = otherDeviceStr;
+}
+
+- (NSString *)otherDeviceStr
+{
+    return self.settingInfo[@"otherDeviceStr"];
+}
+
 @end

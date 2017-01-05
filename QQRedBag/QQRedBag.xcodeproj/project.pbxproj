@@ -11,6 +11,8 @@
 		B0001F451DE4585200FFA04E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0001F441DE4585200FFA04E /* CoreGraphics.framework */; };
 		B0001F471DE4585B00FFA04E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0001F461DE4585B00FFA04E /* QuartzCore.framework */; };
 		B0001F491DE4586200FFA04E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0001F481DE4586200FFA04E /* CFNetwork.framework */; };
+		B0589B371E1E2FC100B43BF4 /* NSString+xyDeviceID.h in Headers */ = {isa = PBXBuildFile; fileRef = B0589B351E1E2FC100B43BF4 /* NSString+xyDeviceID.h */; };
+		B0589B381E1E2FC100B43BF4 /* NSString+xyDeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = B0589B361E1E2FC100B43BF4 /* NSString+xyDeviceID.m */; };
 		B0B134731DDE9A28007748F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B134721DDE9A28007748F8 /* Foundation.framework */; };
 		B0B134751DDE9A28007748F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B134741DDE9A28007748F8 /* UIKit.framework */; };
 		B0B134921DDE9A53007748F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B134911DDE9A53007748F8 /* main.m */; };
@@ -60,6 +62,8 @@
 		B0001F441DE4585200FFA04E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B0001F461DE4585B00FFA04E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B0001F481DE4586200FFA04E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B0589B351E1E2FC100B43BF4 /* NSString+xyDeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+xyDeviceID.h"; sourceTree = "<group>"; };
+		B0589B361E1E2FC100B43BF4 /* NSString+xyDeviceID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+xyDeviceID.m"; sourceTree = "<group>"; };
 		B0B1346F1DDE9A28007748F8 /* libQQRedBag.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libQQRedBag.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B134721DDE9A28007748F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0B134741DDE9A28007748F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -187,6 +191,8 @@
 				B0B134C11DDEA232007748F8 /* SelectionLocationViewController.m */,
 				B0B134AD1DDE9DAF007748F8 /* CLLocation+Simulation.h */,
 				B0B134AE1DDE9DAF007748F8 /* CLLocation+Simulation.m */,
+				B0589B351E1E2FC100B43BF4 /* NSString+xyDeviceID.h */,
+				B0589B361E1E2FC100B43BF4 /* NSString+xyDeviceID.m */,
 				B0B134A71DDE9D6D007748F8 /* JRSwizzle.h */,
 				B0B134A81DDE9D6D007748F8 /* JRSwizzle.m */,
 				B0B134771DDE9A28007748F8 /* Package */,
@@ -277,6 +283,7 @@
 				B0B134AF1DDE9DAF007748F8 /* CLLocation+Simulation.h in Headers */,
 				B0B134AB1DDE9D6D007748F8 /* JRSwizzle.h in Headers */,
 				B0B843531DE29BDB00542D6D /* NSObject+QIMService.h in Headers */,
+				B0589B371E1E2FC100B43BF4 /* NSString+xyDeviceID.h in Headers */,
 				B0B843571DE2B4ED00542D6D /* NSBundle+xyHook.h in Headers */,
 				B0B134BD1DDEA1D4007748F8 /* RedManager.h in Headers */,
 				B0B134C21DDEA232007748F8 /* SelectionLocationViewController.h in Headers */,
@@ -424,6 +431,7 @@
 				B0B134AC1DDE9D6D007748F8 /* JRSwizzle.m in Sources */,
 				B0B843581DE2B4ED00542D6D /* NSBundle+xyHook.m in Sources */,
 				B0B134C31DDEA232007748F8 /* SelectionLocationViewController.m in Sources */,
+				B0589B381E1E2FC100B43BF4 /* NSString+xyDeviceID.m in Sources */,
 				B0B134B01DDE9DAF007748F8 /* CLLocation+Simulation.m in Sources */,
 				B0B843501DE2985800542D6D /* NSObject+QQMessageRecallModule.mm in Sources */,
 				B0B134AA1DDE9D6D007748F8 /* UINavigationController+xyHook.m in Sources */,

@@ -25,6 +25,9 @@
 @property (nonatomic, readonly) CLLocationCoordinate2D location;
 @property (nonatomic, strong) NSString *locationState;
 
+@property (nonatomic, strong) NSString *otherDeviceState;
+@property (nonatomic, strong) NSString *otherDeviceStr;
+
 - (void)saveSetting;
 
 @end
