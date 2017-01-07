@@ -39,7 +39,7 @@
     
     if ([view isKindOfClass:NSClassFromString(@"QQWalletTransferAIOCellView")]) {
         QQWalletRedEnvelopeAIOMsgView *v = ((QQWalletTransferAIOCellView*)view).redEnvelopeAIOMsgView;
-        point = CGPointMake(v.backgroudView.frame.origin.x+10, v.backgroudView.frame.origin.y+10);
+        point = CGPointMake(v.backgroudView.frame.origin.x+v.backgroudView.frame.size.width/2.0, v.backgroudView.frame.origin.y+v.backgroudView.frame.size.height/2.0);
     }
 
     return point;
